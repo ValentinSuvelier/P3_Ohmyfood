@@ -3,6 +3,11 @@ body
     font-family: 'Roboto', Arial, Verdana, sans-serif;
     margin: 0;
 }
+a:link
+{
+    text-decoration: none;
+}
+
 header
 {
     position: relative;
@@ -143,25 +148,81 @@ header
 }
 .flatbg
 {
-    display: none;
-    transition-duration: 1s;
+    opacity: 0;
+    transition-duration: 500ms;
 }
 .flat
 {
-    transition-duration: 1s;
+    transition-duration: 500ms;
 }
 .like:hover>.flat
 {
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transform: scale(1.80);
+    transition-duration: 500ms;
+    transform: scale(1.20)
 }
 .like:hover>.flatbg
 {
     display: block;
+    opacity: 1;
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transform: scale(1.10);
+    transform: scale(1.20);
+    transition-duration: 500ms;
+}
+
+footer
+{
+    background-color: #353535;
+    margin: auto;
+    padding: 2rem;
+}
+.footlogo
+{
+    font-family: 'Shrikhand';
+    color: white;
+}
+footer p
+{
+    margin: 0.5rem;
+}
+.contentlink
+{
+    display: flex;
+    align-items: center;
+}
+.footlink
+{
+    color: white;
+}
+.footer_icon
+{
+    width: 1.5rem;
+}
+
+
+
+/*----------reponsive mobile--------*/
+
+@media all and (max-width: 500px)
+
+{
+    .gridfonc
+{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1rem;
+}
+.fonctionnement
+{
+    margin: 0 2rem;
+}
+.gridresto
+{
+    grid-template-columns: 1fr;
+}
+
 }
