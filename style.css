@@ -8,7 +8,10 @@ a:link
     text-decoration: none;
     color: black;
 }
-
+footer a:link
+{
+    color: white;
+}
 header
 {
     position: relative;
