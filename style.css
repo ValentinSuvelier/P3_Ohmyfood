@@ -8,9 +8,19 @@ a:link
     text-decoration: none;
     color: black;
 }
+a
+{
+    cursor: pointer;
+}
 footer a:link
 {
     color: white;
+}
+.btnreserv:hover
+{
+    letter-spacing: 0.250rem;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
 }
 header
 {
