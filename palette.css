@@ -17,6 +17,10 @@ header
     position: relative;
     padding: 1rem;
 }
+.fa-arrow-left
+{
+    color: black;
+}
 .back
 {
     position: absolute;
@@ -104,6 +108,12 @@ section
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1rem;
 }
+.column
+{
+    overflow: hidden;
+    max-width: 100%;
+    padding: 0.1rem;
+}
 .titlecontent
 {
     font-weight: 400;
@@ -117,32 +127,93 @@ section
 {
     display: flex;
     justify-content: space-between;
-    padding: 0.7rem;
+    position: relative;
+    padding: 1rem;
     margin: 1rem 0;
     background-color: white;
     box-shadow: 2px 2px 6px #cccccc;
     border-radius: 1rem;
     cursor: pointer;
+    overflow: hidden;
+    max-width: 100%;
+    transition-duration: .5s;
 }
 .descript
 {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
 }
-.descript>h4
+.descript>div>h4
 {
     margin: 0;
+    max-width: 100%;
+    white-space: nowrap; /*pas de retour ligne*/
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.descript>p
+.descript>div>p
 {
     margin: 0;
+    max-width: 100%;
+    white-space: nowrap; /*pas de retour ligne*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.descript>:nth-child(1)
+{
+    max-width: 100%;
+    white-space: nowrap; /*pas de retour ligne*/
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .prix
 {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    margin-right: 0.5rem;
 }
+
+
+/*--------animations slider des menus-------*/
+
+.selectmenu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #99E2D0;
+    margin: -1rem -5rem -1rem -1rem;
+    width: 4rem;
+    transition-duration: .5s;
+}
+.menu:hover>.selectmenu
+{
+    transition-duration: .5s;
+    margin: -1rem -1rem -1rem 0rem;
+}
+.menu:hover>.selectmenu>i
+{
+    transform: rotate(0deg);
+    transition-duration: .7s;
+}
+.fa-check
+{
+    color: #99E2D0;
+    border-radius: 100%;
+    background-color: white;
+    padding: 0.2rem;
+    transform: rotate(360deg);
+    transition-duration: .7s;
+}
+
+@keyframes 
+{
+}
+
+
 
 
 .command
@@ -154,15 +225,16 @@ section
 }
 .btncommand:hover
 {
-    letter-spacing: 0.250rem;
-    transition-duration: 0.4s;
-    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+    box-shadow: 4px 4px 2px #909090;
+    background-image: linear-gradient(0deg,rgba(255,121,218,.9),rgba(255,153,227,.9));
 }
 .btncommand
 {
     color: white;
     border-radius: 2rem;
     padding: 0.75rem 1rem;
+    box-shadow: 3px 3px 4px #cccccc;
     background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
 }
 footer
