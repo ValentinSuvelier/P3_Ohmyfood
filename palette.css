@@ -122,6 +122,8 @@ section
 {
     border-bottom: 3px solid #99E2D0;
     width: 3.80rem;
+    position: relative;
+    bottom: 1rem;
 }
 .menu
 {
@@ -176,7 +178,37 @@ section
     margin-right: 0.5rem;
 }
 
+/*-------animations apparitions des menus-------*/
 
+.entrees
+{
+    animation: apparition 1s;
+}
+.plats
+{
+    animation: apparition 2s;
+}
+.desserts
+{
+    animation: apparition 3s;
+}
+@keyframes apparition
+{
+    0%
+    {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50%
+    {
+        opacity: 1;
+        transform: scale(110%);
+    }
+    100%
+    {
+        transform: scale(100%);
+    }
+}
 /*--------animations slider des menus-------*/
 
 .selectmenu

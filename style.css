@@ -104,6 +104,10 @@ header
     box-shadow: 3px 3px 10px #CCCCCC;
     padding: 1.5rem;
 }
+.gridfonccontent:hover
+{
+    background-color: #F6F6F6;
+}
 .gridfonccontent:hover>i
 {
     color: #9356DC;
