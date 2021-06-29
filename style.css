@@ -4,7 +4,57 @@ body
     margin: 0;
 }
 
-
+/*-----animations chargement de la page------*/
+.loading
+{
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    margin: -45px 0 0 -45px;
+    border: 5px solid #9356DC;
+    border-top: 5px solid #99E2D0;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: loading 1s linear;
+    animation-iteration-count: 4;
+}
+@keyframes loading
+{
+    0%
+    { 
+        transform: rotate(0deg); 
+    }
+    100%
+    { 
+        transform: rotate(360deg);
+    }
+}
+.loadcontent
+{
+    animation: loadcontent 4s linear;
+    opacity: 0;
+}
+@keyframes loadcontent
+{
+    0%
+    { 
+        opacity: 0;
+    }
+    25%
+    {
+        opacity: 1;
+    }
+    75%
+    { 
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
 ::placeholder
 {
     font-weight: bold;
